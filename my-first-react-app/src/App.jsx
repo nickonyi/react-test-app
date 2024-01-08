@@ -4,13 +4,21 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+const animals = ["Lion","Snake","Lizard","Gazelle","Buffaloe"];
+
 
   return (
-    <>
-      <div>Hello World!</div>
-
-    </>
+    <div>
+      <h1>Animals:</h1>
+      <ul>
+        {
+        animals.map((animal)=>{
+        return <li key={animal}>{animal}</li>
+        })
+        }
+      </ul>
+    </div>
   )
 }
 
